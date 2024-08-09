@@ -1,0 +1,34 @@
+# Environment variables
+.env
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Compiled Python files
+*.pyc
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# PDF files (if you don't want to include sample invoices in the repo)
+*.pdf
+
+# Jupyter Notebook
+.ipynb_checkpoints
