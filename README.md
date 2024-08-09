@@ -1,3 +1,11 @@
+<img width="524" alt="swipe" src="https://github.com/user-attachments/assets/b69811d1-c3f4-45a3-9199-91ca263cd3a6">
+
+
+
+
+
+
+
 # InvoiceX
 
 InvoiceAlchemy is a Python-based tool that extracts key information from invoice PDFs using OpenAI's GPT-3.5 model. It automates the process of parsing invoice details, making it easier to process and analyze invoice data.
