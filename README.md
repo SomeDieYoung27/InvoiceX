@@ -24,10 +24,11 @@ Before you begin, ensure you have met the following requirements:
 - An OpenAI API key
 - Tesseract OCR installed (for image processing)
 
- ## Installation
+## Installation
 
 1. Clone the repository:
 git clone https://github.com/SomeDieYoung27/InvoiceAlchemy.git
+cd InvoiceAlchemy
 Copy
 2. Install the required dependencies:
 pip install -r requirements.txt
@@ -38,10 +39,29 @@ Copy
   ```
   OPENAI_API_KEY=your_api_key_here
 
-  
-4. Ensure Tesseract OCR is installed and the path is correctly set in the code:
-```python
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+## Usage
 
+Run the Flask application:
+Copypython app.py
 
+Open a web browser and go to http://localhost:5000
+Upload an invoice PDF or image file through the web interface
+The application will process the file and return the extracted invoice details in JSON format
 
+## Configuration
+
+You can modify the extract_invoice_details function in app.py to customize the information extracted from invoices.
+Contributing
+Contributions to InvoiceX are welcome. Please follow these steps:
+
+Fork the repository
+Create a new branch (git checkout -b feature/AmazingFeature)
+Make your changes
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+
+## License
+Distributed under the MIT License. See LICENSE for more information.
+Contact
+Email - shashwat12028@gmail.com
