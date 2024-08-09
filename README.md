@@ -33,7 +33,6 @@ cd InvoiceAlchemy
 3. Install the required dependencies:
 pip install -r requirements.txt
 4. Ensure Tesseract OCR is installed and the path is correctly set in the code:
-```python
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 5. Set up your environment variables:
@@ -45,7 +44,7 @@ pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tessera
 ## Usage
 
 Run the Flask application:
-Copypython app.py
+python app.py
 
 Open a web browser and go to http://localhost:5000
 Upload an invoice PDF or image file through the web interface
