@@ -28,12 +28,13 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
 git clone https://github.com/SomeDieYoung27/InvoiceAlchemy.git
+<br><br>
 cd InvoiceAlchemy
 Copy
-2. Install the required dependencies:
+3. Install the required dependencies:
 pip install -r requirements.txt
 Copy
-3. Set up your environment variables:
+4. Set up your environment variables:
 * Create a `.env` file in the root directory
 * Add your OpenAI API key:
   ```
@@ -55,10 +56,13 @@ Contributing
 Contributions to InvoiceX are welcome. Please follow these steps:
 
 Fork the repository
-Create a new branch (git checkout -b feature/AmazingFeature)
+Create a new branch 
+(git checkout -b feature/AmazingFeature)
 Make your changes
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
+Commit your changes
+(git commit -m 'Add some AmazingFeature')
+Push to the branch
+(git push origin feature/AmazingFeature)
 Open a Pull Request
 
 ## License
