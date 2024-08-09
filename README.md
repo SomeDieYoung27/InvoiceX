@@ -24,7 +24,7 @@ Before you begin, ensure you have met the following requirements:
 - An OpenAI API key
 - Tesseract OCR installed (for image processing)
 
-  ## Installation
+ ## Installation
 
 1. Clone the repository:
 git clone https://github.com/SomeDieYoung27/InvoiceAlchemy.git
