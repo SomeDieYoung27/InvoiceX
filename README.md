@@ -33,6 +33,7 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
    
  git clone https://github.com/SomeDieYoung27/InvoiceAlchemy.git
+ 
  cd InvoiceAlchemy
 
 2. Install the required dependencies:
@@ -49,36 +50,7 @@ Before you begin, ensure you have met the following requirements:
 ```python
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
- Usage
 
-Run the Flask application:
-
-python app.py
-
-Open a web browser and go to http://localhost:5000
-Upload an invoice PDF or image file through the web interface
-The application will process the file and return the extracted invoice details in JSON format
-
-3. The script will output the extracted invoice details in JSON format.
-
-## Configuration
-
-You can modify the `extract_invoice_details` function in `app.py` to customize the information extracted from invoices.
-
-## Contributing
-
-Contributions to InvoiceX are welcome. Please follow these steps:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/AmazingFeature`)
-3. Make your changes
-4. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-5. Push to the branch (`git push origin feature/AmazingFeature`)
-6. Open a Pull Request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
