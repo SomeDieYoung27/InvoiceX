@@ -2,6 +2,14 @@
 
 InvoiceX is a Python-based tool that extracts key information from invoice PDFs and images using OpenAI's GPT-3.5 model and OCR technology. It automates the process of parsing invoice details, making it easier to process and analyze invoice data.
 
+<br><br>
+
+
+
+https://github.com/user-attachments/assets/4b662a51-b393-45fe-a092-007b7ca4d7a0
+
+
+
 <img width="652" alt="image" src="https://github.com/user-attachments/assets/3ea6bd10-00ca-4d23-a5e1-640aa71d3fea">
 
 <br><br>
