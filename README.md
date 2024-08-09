@@ -1,15 +1,12 @@
+# InvoiceX
+
+InvoiceX is a Python-based tool that extracts key information from invoice PDFs and images using OpenAI's GPT-3.5 model and OCR technology. It automates the process of parsing invoice details, making it easier to process and analyze invoice data.
+
 <img width="652" alt="image" src="https://github.com/user-attachments/assets/3ea6bd10-00ca-4d23-a5e1-640aa71d3fea">
 
 <br><br>
 
 <img width="604" alt="image" src="https://github.com/user-attachments/assets/e2141aaa-3f33-4c7c-9635-d78c7664218a">
-
-
-
-
-# InvoiceX
-
-InvoiceX is a Python-based tool that extracts key information from invoice PDFs and images using OpenAI's GPT-3.5 model and OCR technology. It automates the process of parsing invoice details, making it easier to process and analyze invoice data.
 
 ## Features
 
@@ -23,7 +20,6 @@ InvoiceX is a Python-based tool that extracts key information from invoice PDFs 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
-
 - Python 3.7 or higher
 - An OpenAI API key
 - Tesseract OCR installed (for image processing)
@@ -31,27 +27,3 @@ Before you begin, ensure you have met the following requirements:
 ## Installation
 
 1. Clone the repository:
-   
- git clone https://github.com/SomeDieYoung27/InvoiceAlchemy.git
- 
- cd InvoiceAlchemy
-
-2. Install the required dependencies:
-   pip install -r requirements.txt
-
-3. Set up your environment variables:
-* Create a `.env` file in the root directory
-* Add your OpenAI API key:
-  ```
-  OPENAI_API_KEY=your_api_key_here
-  ```
-
-4. Ensure Tesseract OCR is installed and the path is correctly set in the code:
-```python
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-
-
-
-## Contact
-
-Email - shashwat 12028@gmail.com
