@@ -27,3 +27,6 @@ Before you begin, ensure you have met the following requirements:
 ## Installation
 
 1. Clone the repository:
+
+   git clone https://github.com/SomeDieYoung27/InvoiceAlchemy.git
+   cd InvoiceAlchemy
