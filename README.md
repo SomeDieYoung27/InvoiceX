@@ -37,10 +37,11 @@ Copy
 * Add your OpenAI API key:
   ```
   OPENAI_API_KEY=your_api_key_here
-  ```
 
+  
 4. Ensure Tesseract OCR is installed and the path is correctly set in the code:
 ```python
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
 
 
