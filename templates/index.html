@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Extractor Pro</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 2.5em;
+      }
+      #uploadForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      input[type="file"] {
+        display: none;
+      }
+      .file-upload-label {
+        display: inline-block;
+        padding: 12px 20px;
+        background-color: #3498db;
+        color: #fff;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        text-align: center;
+        width: 200px;
+      }
+      .file-upload-label:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        width: 200px;
+        padding: 12px 20px;
+        background-color: #2ecc71;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+      button:hover {
+        background-color: #27ae60;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      #result {
+        margin-top: 30px;
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        border: 1px solid #e9ecef;
+      }
+      #fileName {
+        margin-top: 15px;
+        font-style: italic;
+        color: #6c757d;
+      }
+      .loader {
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin: 20px auto;
+        display: none;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .icon {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fas fa-file-invoice icon"></i>Invoice X</h1>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <label for="fileInput" class="file-upload-label">
+          <i class="fas fa-cloud-upload-alt icon"></i>Choose File
+        </label>
+        <input
+          id="fileInput"
+          type="file"
+          name="file"
+          accept=".pdf,.png,.jpg,.jpeg"
+        />
+        <div id="fileName"></div>
+        <button type="submit">
+          <i class="fas fa-cogs icon"></i>Process Invoice
+        </button>
+      </form>
+      <div class="loader" id="loader"></div>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      document
+        .getElementById("fileInput")
+        .addEventListener("change", function (e) {
+          var fileName = e.target.files[0].name;
+          document.getElementById("fileName").textContent =
+            "Selected file: " + fileName;
+        });
+
+      document
+        .getElementById("uploadForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          var formData = new FormData(this);
+
+          document.getElementById("loader").style.display = "block";
+          document.getElementById("result").innerText = "";
+
+          fetch("/", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              document.getElementById("loader").style.display = "none";
+              document.getElementById("result").innerText = JSON.stringify(
+                data,
+                null,
+                2
+              );
+            })
+            .catch((error) => {
+              document.getElementById("loader").style.display = "none";
+              console.error("Error:", error);
+              document.getElementById("result").innerText =
+                "An error occurred while processing the invoice.";
+            });
+        });
+    </script>
+  </body>
+</html>
