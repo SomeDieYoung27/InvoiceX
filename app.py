@@ -3,10 +3,9 @@ import PyPDF2
 from openai import OpenAI
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
-# Set up OpenAI client
+
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def extract_text_from_pdf(pdf_path):
@@ -63,8 +62,8 @@ def process_invoice(pdf_path):
     details = extract_invoice_details(text)
     return details
 
-# Example usage
+
 if __name__ == "__main__":
-    pdf_path = "invoice.pdf"  # Replace with your actual PDF path
+    pdf_path = "invoice.pdf"  
     invoice_details = process_invoice(pdf_path)
     print(invoice_details)
