@@ -1,4 +1,9 @@
-<img width="524" alt="swipe" src="https://github.com/user-attachments/assets/b69811d1-c3f4-45a3-9199-91ca263cd3a6">
+<img width="652" alt="image" src="https://github.com/user-attachments/assets/3ea6bd10-00ca-4d23-a5e1-640aa71d3fea">
+
+
+<img width="806" alt="image" src="https://github.com/user-attachments/assets/bf0c2ece-a016-4075-8f24-b1092176d5e4">
+
+
 
 
 
@@ -8,14 +13,16 @@
 
 # InvoiceX
 
-InvoiceAlchemy is a Python-based tool that extracts key information from invoice PDFs using OpenAI's GPT-3.5 model. It automates the process of parsing invoice details, making it easier to process and analyze invoice data.
+InvoiceX is a Python-based tool that extracts key information from invoice PDFs and images using OpenAI's GPT-3.5 model and OCR technology. It automates the process of parsing invoice details, making it easier to process and analyze invoice data.
 
 ## Features
 
-- Extracts text from PDF invoices
-- Uses AI to parse and structure invoice information
-- Extracts customer details, product information (including HSN codes), and total amount
-- Outputs structured data in JSON format
+* Extracts text from PDF invoices and image files (PNG, JPG, JPEG)
+* Uses OCR (Optical Character Recognition) for processing images
+* Leverages AI to parse and structure invoice information
+* Extracts customer details, product information (including HSN codes), and total amount
+* Outputs structured data in JSON format
+* Provides a web interface for easy file upload and processing
 
 ## Prerequisites
 
@@ -23,6 +30,7 @@ Before you begin, ensure you have met the following requirements:
 
 - Python 3.7 or higher
 - An OpenAI API key
+- Tesseract OCR installed (for image processing)
 
 ## Installation
 
@@ -35,18 +43,25 @@ Before you begin, ensure you have met the following requirements:
    pip install -r requirements.txt
 
 3. Set up your environment variables:
-- Create a `.env` file in the root directory
-- Add your OpenAI API key:
+* Create a `.env` file in the root directory
+* Add your OpenAI API key:
   ```
   OPENAI_API_KEY=your_api_key_here
   ```
 
- ## Usage
+4. Ensure Tesseract OCR is installed and the path is correctly set in the code:
+```python
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
- 1. Place your invoice PDF in the project directory or specify the full path to the PDF.
+ Usage
 
- 2. Run the script:
-    python app.py
+Run the Flask application:
+
+python app.py
+
+Open a web browser and go to http://localhost:5000
+Upload an invoice PDF or image file through the web interface
+The application will process the file and return the extracted invoice details in JSON format
 
 3. The script will output the extracted invoice details in JSON format.
 
