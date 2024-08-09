@@ -45,6 +45,8 @@ Before you begin, ensure you have met the following requirements:
 ```python
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
+<br></br>
+
 Usage
 
 Run the Flask application:
